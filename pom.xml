@@ -16,11 +16,7 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.5</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -40,6 +36,27 @@
             <version>1.0.6</version>
         </dependency>
 
+
+        <!--  for in app pay  -->
+        <dependency>
+            <groupId>com.ning</groupId>
+            <artifactId>async-http-client</artifactId>
+            <version>1.6.5</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.5</version>
+        </dependency>
+
+        <!--  for aws s3 and mail  -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.3.11</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -69,19 +86,10 @@
             <version>2.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk</artifactId>
-            <version>1.3.11</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.ning</groupId>
-            <artifactId>async-http-client</artifactId>
-            <version>1.6.5</version>
-        </dependency>
 
 
+
+        <!--  for apns  -->
         <dependency>
             <groupId>javapns</groupId>
             <artifactId>javapns</artifactId>
@@ -104,7 +112,7 @@
 
     <distributionManagement>
         <repository>
-            <id>releases</id>
+            <id>51app releases</id>
             <url>http://51app.mobi:8081/nexus/content/repositories/releases</url>
         </repository>
     </distributionManagement>
@@ -132,6 +140,7 @@
             <url>http://51app.mobi:8081/nexus/content/repositories/thirdparty/</url>
         </repository>
     </repositories>
+
     <build>
 
         <plugins>

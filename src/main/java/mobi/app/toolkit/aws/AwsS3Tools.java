@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public interface AwsS3Tools {
 
-
+    String upload(String bucketName, String key, byte[] data, String contentType);
     String upload(String bucketName, String key, byte[] data, String contentType, Map<String, String> meta);
 
 }

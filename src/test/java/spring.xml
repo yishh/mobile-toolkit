@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean id="apnsTools" class="mobi.app.toolkit.apple.impl.DefaultApnsTools">
+       <constructor-arg index="0" value="${aps.key}"/>
+       <constructor-arg index="1" value="${aps.password}"/>
+       <constructor-arg index="2" value="${aps.production}"/>
+   </bean>
+
+    <bean id="asyncApnsTools" class="mobi.app.toolkit.apple.impl.DefaultAsyncApnsTools">
+        <constructor-arg index="0" value="${aps.key}"/>
+        <constructor-arg index="1" value="${aps.password}"/>
+        <constructor-arg index="2" value="${aps.production}"/>
+        <constructor-arg index="3" value="${aps.threadNumber}"/>
+    </bean>
+
+    <bean id="logMonitor" class="mobi.app.toolkit.apple.impl.LogNotificationMonitor">
+        <constructor-arg index="0" value="2"/>
+        <constructor-arg index="1" ref="asyncApnsTools"/>
+    </bean>
+
+
+    <bean id="iapTools" class="mobi.app.toolkit.apple.impl.DefaultIapTools">
+        <constructor-arg value="${iap.production}"/>
+    </bean>
+
+
+    <bean id="amazonS3Client" class="mobi.app.toolkit.aws.impl.DefaultS3Tools">
+        <constructor-arg index="0" value="${s3.accessKey}"/>
+        <constructor-arg index="1" value="${s3.accessSecret}"/>
+    </bean>
+
+    <bean id="awsMailTools" class="mobi.app.toolkit.aws.impl.DefaultMailTools">
+        <constructor-arg index="0" value="${aws.accessKey}"/>
+        <constructor-arg index="1" value="${aws.accessSecret}"/>
+        <constructor-arg index="2" value="${aws.adminMail}"/>
+    </bean>
+</beans>

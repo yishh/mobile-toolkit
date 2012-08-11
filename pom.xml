@@ -40,13 +40,6 @@
             <version>1.0.6</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>10.0.1</version>
-        </dependency>
-
-
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -88,11 +81,6 @@
             <version>1.6.5</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.restfb</groupId>
-            <artifactId>restfb</artifactId>
-            <version>1.6.9</version>
-        </dependency>
 
         <dependency>
             <groupId>javapns</groupId>

@@ -36,3 +36,5 @@ target/mobile-toolkit-1.0.jar
 target/surefire/surefire1653060900166451736tmp
 
 target/test-classes/ToolsUse.class
+
+target/test-classes/spring.xml

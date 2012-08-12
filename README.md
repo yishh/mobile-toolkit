@@ -138,6 +138,11 @@ Suggest config this in spring:
 ## dependency
 
 Because this toolkit just a simple wrap, so it needs some dependency . 
+        <dependency>
+             <groupId>com.google.guava</groupId>
+             <artifactId>guava</artifactId>
+             <version>10.0.1</version>
+        </dependency>
 
         // logback
         <dependency>
